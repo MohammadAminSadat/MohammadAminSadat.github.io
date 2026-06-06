@@ -57,49 +57,50 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0;
   animation: fadeUp 0.7s 0.4s forwards;
 }
 
-.hero-tag {
-  display: inline-block;
-  padding: 0.3rem 0.85rem;
-  border: 1.5px solid var(--color-accent2);
-  color: var(--color-accent);
-  border-radius: 100px;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.hero-quote {
-  max-width: 540px;
-  border-left: 3px solid var(--color-accent2);
-  padding-left: 1.2rem;
-  opacity: 0;
-  animation: fadeUp 0.7s 0.55s forwards;
-}
-
-.hero-quote p {
-  font-style: italic;
+.hero-subtitle {
+  font-size: 1rem;
   color: var(--color-muted);
-  font-size: 0.975rem;
-  line-height: 1.65;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  max-width: 440px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.5s forwards;
 }
 
-.hero-quote cite {
-  display: block;
-  margin-top: 0.5rem;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--color-text);
-  letter-spacing: 0.04em;
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.65s forwards;
+}
+
+/* Ghost/outline variant of the btn used in hero */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+}
+
+.btn--ghost:hover {
+  background: rgba(10, 191, 188, 0.1);
+  color: var(--color-accent2);
+  border-color: var(--color-accent2);
+  transform: translateY(-1px);
 }
 
 /* Mobile */
 @media (max-width: 640px) {
   #hero {
     min-height: calc(100svh - var(--nav-height));
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

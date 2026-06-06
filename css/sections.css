@@ -2,17 +2,94 @@
    sections.css — Styles for all page sections (below the hero)
    ========================================================================== */
 
+/* ---- Quote band (full-width strip between hero and about) ---- */
+.quote-band {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.25rem clamp(1.5rem, 5vw, 3rem);
+}
+
+.quote-band-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;   /* ← stack p and cite vertically */
+  gap: 0;
+  border-left: 3px solid var(--color-accent2);
+  padding-left: 1.4rem;
+}
+
+.quote-band-inner p {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 0.975rem;
+  line-height: 1.65;
+  margin-bottom: 0.2rem;
+}
+
+/* AFTER */
+.quote-band-inner cite {
+  display: block;           /* ← own line */
+  margin-top: 0.2rem;       /* ← breathing room below the quote */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 /* ---- About ---- */
 #about .about-text {
   font-size: 1.05rem;
   color: var(--color-muted);
   max-width: 680px;
   line-height: 1.85;
+  text-align: justify;
+}
+
+/* ---- Skills ---- */
+#skills {
+  background: var(--color-surface);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.75rem 2.5rem;
+}
+
+.skill-group-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(10, 191, 188, 0.08);
+  border: 1px solid rgba(10, 191, 188, 0.2);
+  color: var(--color-accent2);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 /* ---- Education ---- */
 #education {
-  background: var(--color-surface);
+  background: var(--color-bg);
 }
 
 .edu-grid {
@@ -25,7 +102,7 @@
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 1.5rem 1.75rem;
-  background: var(--color-bg);
+  background: var(--color-surface);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -38,7 +115,7 @@
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--color-text);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .edu-university {
@@ -47,7 +124,22 @@
   font-weight: 500;
 }
 
-/* ---- Work Experience ---- */
+.edu-year {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin: 0.25rem 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.edu-detail {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
 /* ---- Work Experience ---- */
 .timeline {
   position: relative;
@@ -59,31 +151,40 @@
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 2rem 1fr;   /* col 1: dot+line, col 2: content */
+  grid-template-columns: 2rem 1fr;
   gap: 0 1.25rem;
-  padding-bottom: 2.25rem;
+  padding-bottom: 2.5rem;
 }
 
 .timeline-item:last-child {
   padding-bottom: 0;
 }
 
-/* Vertical line drawn on the left column pseudo-element */
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: calc(1rem - 1px);            /* centre of the 2rem column */
-  top: 0.55rem;                      /* start just below dot centre */
+  left: calc(1rem - 1px);
+  top: 0.55rem;
   bottom: 0;
   width: 2px;
   background: var(--color-border);
 }
 
 .timeline-item:last-child::before {
-  display: none;                     /* no line after the last item */
+  display: none;
 }
 
-/* Dot — sits in the left column, centred on the line */
+/* Gap period — dashed line */
+.timeline-item--gap::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-border) 0px,
+    var(--color-border) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
 .timeline-dot {
   grid-column: 1;
   grid-row: 1;
@@ -93,16 +194,30 @@
   background: var(--color-accent2);
   border: 2px solid var(--color-bg);
   box-shadow: 0 0 0 2px var(--color-accent2);
-  margin-top: 0.3rem;                /* align with first line of text */
+  margin-top: 0.3rem;
   justify-self: center;
-  position: relative;                /* sits above ::before line */
+  position: relative;
   z-index: 1;
 }
 
-/* Content column */
+/* Muted dot for gap period */
+.timeline-dot--muted {
+  background: var(--color-border);
+  box-shadow: 0 0 0 2px var(--color-border);
+}
+
 .timeline-content {
   grid-column: 2;
   grid-row: 1;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.2rem;
 }
 
 .timeline-company {
@@ -111,16 +226,58 @@
   color: var(--color-text);
 }
 
+.timeline-company--muted {
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
 .timeline-role {
   font-size: 0.9rem;
   color: var(--color-accent);
   font-weight: 500;
-  margin: 0.2rem 0;
+  margin-bottom: 0.75rem;
 }
 
 .timeline-period {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.timeline-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.timeline-bullets li {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.timeline-bullets li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.timeline-bullets li a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(10,191,188,0.4);
+  text-underline-offset: 2px;
+}
+
+.timeline-bullets li a:hover {
+  color: var(--color-accent2);
 }
 
 /* ---- Projects ---- */
@@ -129,17 +286,20 @@
 }
 
 .projects-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .project-card {
   border: 1px solid var(--color-border);
   border-radius: 14px;
-  padding: 1.75rem 2rem;
+  padding: 1.75rem;
   background: var(--color-bg);
-  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
@@ -148,29 +308,84 @@
   transform: translateY(-3px);
 }
 
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
 .project-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  line-height: 1.3;
 }
 
 .project-card h3 a {
   color: var(--color-text);
-  transition: color 0.2s;
   text-decoration: underline;
   text-decoration-color: var(--color-accent2);
   text-underline-offset: 3px;
+  transition: color 0.2s;
 }
 
 .project-card h3 a:hover {
   color: var(--color-accent);
 }
 
+.project-github-link {
+  color: var(--color-muted);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.project-github-link:hover {
+  color: var(--color-accent);
+}
+
+.project-github-link svg {
+  width: 20px;
+  height: 20px;
+}
+
 .project-card p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--color-muted);
   line-height: 1.7;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+/* GitHub profile CTA link below projects */
+.github-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.github-profile-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.github-profile-link:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  background: rgba(10, 191, 188, 0.06);
 }
 
 /* ---- CV ---- */
@@ -190,5 +405,12 @@
 @media (max-width: 640px) {
   section {
     padding: 3.5rem 0;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.1rem;
   }
 }

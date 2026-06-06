@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="max-image-preview:large" />
+  <meta name="description"
+    content="Mohammad Amin Sadat — ADAS & Embedded Software Engineer specialising in control systems and autonomous vehicles." />
   <title>Mohammad Amin Sadat</title>
 
   <!-- Favicon -->
@@ -13,9 +16,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
-  <!-- Stylesheets (order matters: tokens → base → components) -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/animations.css" />
@@ -24,153 +29,52 @@
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/footer.css" />
 </head>
+
 <body>
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="navbar">
-    <a href="index.html" class="nav-logo">Mohammad Amin Sadat</a>
-
+    <a href="index.html" class="nav-logo">
+      <img src="assets/icons/logo.svg" alt="MAS Logo" class="nav-logo-img">
+      <span class="nav-logo-text">Mohammad Amin Sadat</span>
+    </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html"   class="nav-item active">Home</a></li>
-      <li><a href="blog.html"    class="nav-item">Blog</a></li>
+      <li><a href="index.html" class="nav-item active">Home</a></li>
+      <li><a href="blog.html" class="nav-item">Blog</a></li>
       <li><a href="contact.html" class="nav-item">Contact Me</a></li>
     </ul>
-
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- ===================== MAIN CONTENT ===================== -->
   <main id="content">
 
-    <!-- HERO -->
+    <!-- ===================== HERO ===================== -->
     <section id="hero">
       <div class="hero-inner">
         <p class="hero-eyebrow">Hello, I'm</p>
         <h1 class="hero-name">Mohammad Amin</h1>
 
         <div class="hero-titles">
-          <span class="hero-tag">Mechatronics Engineer</span>
-          <span class="hero-tag">AI Enthusiast</span>
+          <span class="hero-tag">ADAS Engineer</span>
+          <span class="hero-tag">Embedded Software</span>
+          <span class="hero-tag">Autonomous Vehicles</span>
         </div>
 
-        <blockquote class="hero-quote">
-          <p>Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.</p>
-          <cite>— Sir Henry Royce</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container reveal">
-        <p class="section-label">Who I am</p>
-        <h2 class="section-title">About Me</h2>
-        <p class="about-text">
-          Hi, my name is Seyed Mohammad Amin (Reza) Sadat. I am a mechatronics engineer with an MSc degree.
-          I'm passionate about technology, robots, and self-driving cars. I enjoy playing electric guitar and
-          listening to rock and metal music. I'm also passionate about karate, holding a 3rd dan black belt
-          with coaching and referee certifications. This website is a space for me to share my thoughts,
-          projects, and experiences.
+        <p class="hero-subtitle">
+          Building safety-critical software for self-driving systems.<br>
+          <!-- ISO&nbsp;26262 · C++ · Rust · Control Theory -->
         </p>
-      </div>
-    </section>
 
-    <hr class="divider" />
-
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="container reveal">
-        <p class="section-label">Academic Background</p>
-        <h2 class="section-title">Education</h2>
-
-        <div class="edu-grid">
-          <div class="edu-card">
-            <p class="edu-degree">Mechanical Engineering BSc.</p>
-            <p class="edu-university">Shiraz University</p>
-          </div>
-          <div class="edu-card">
-            <p class="edu-degree">Mechatronics Engineering MSc.</p>
-            <p class="edu-university">Shahid Beheshti University</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- WORK EXPERIENCE -->
-    <section id="experience">
-      <div class="container reveal">
-        <p class="section-label">Career</p>
-        <h2 class="section-title">Work Experience</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <p class="timeline-company">AVID Mechanics</p>
-              <p class="timeline-role">Mechatronics Engineer / AI Researcher</p>
-              <p class="timeline-period">2021 – 2023</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-dot"></span>
-            <div class="timeline-content">
-              <p class="timeline-company">SoftwareMotion Co., Ltd</p>
-              <p class="timeline-role">ADAS Control Engineer</p>
-              <p class="timeline-period">2025 – Present</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="container reveal">
-        <p class="section-label">What I've built</p>
-        <h2 class="section-title">Projects</h2>
-
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>
-              <a href="https://crates.io/crates/fuzzy-logic_rs" target="_blank" rel="noopener">
-                fuzzy-logic_rs
-              </a>
-            </h3>
-            <p>
-              This project was a passion of mine. This library is fully functional for type I systems.
-              I plan to update it in the future and add more functionalities.
-            </p>
-          </div>
-          <!-- Add more project cards here -->
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- CURRICULUM VITAE -->
-    <section id="cv">
-      <div class="container reveal">
-        <p class="section-label">Resume</p>
-        <h2 class="section-title">Curriculum Vitae</h2>
-
-        <div class="cv-block">
-          <p>You can download the latest version of my CV from here.</p>
-          <a href="assets/CV/CV.pdf"
-             target="_blank" rel="noopener" class="btn" download="Mohammad_Amin_Sadat_CV.pdf">
-            <!-- Download icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+        <div class="hero-cta">
+          <a href="#projects" class="btn">See My Work</a>
+          <a href="assets/CV/CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost"
+            download="Mohammad_Amin_Sadat_CV.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
             </svg>
             Download CV
           </a>
@@ -178,13 +82,265 @@
       </div>
     </section>
 
+    <!-- QUOTE BAND -->
+    <div class="quote-band">
+      <blockquote class="quote-band-inner">
+        <p>Strive for perfection in everything you do. Take the best that exists and make it better. When it does not
+          exist, design it.</p>
+          <br>
+        <cite>— Sir Henry Royce</cite>
+      </blockquote>
+    </div>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <div class="container reveal">
+        <p class="section-label">Who I am</p>
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+          Hey, I'm Mohammad Amin — a Mechatronics Engineer with an MSc and a genuine obsession with making things move,
+          think, and decide on their own. My work sits at the crossroads of control systems, robotics, and AI, with a
+          particular passion for self-driving cars. There's something fascinating about the challenge of teaching a
+          machine to navigate the world safely and autonomously — it's the kind of problem I could spend a lifetime on,
+          from the algorithms down to the hardware they run on.
+        </p>
+        <p class="about-text" style="margin-top:1rem;">
+          Outside of engineering, I play electric guitar, have a soft spot for rock and metal, and hold a 3rd dan black
+          belt in karate (yes, I coach and referee too). I share my space with Ash, my kitten, who has strong opinions
+          about my keyboard and my deadlines.
+          This site is where I share the projects I'm building, the ideas I'm exploring, and the occasional thought
+          worth putting into words.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills">
+      <div class="container reveal">
+        <p class="section-label">Technical Stack</p>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Domains</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">ADAS</span>
+              <span class="skill-tag">Embedded Systems</span>
+              <span class="skill-tag">Control Theory</span>
+              <span class="skill-tag">Robotics</span>
+              <span class="skill-tag">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Rust</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">MATLAB</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Tools & Frameworks</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">ROS / ROS2</span>
+              <span class="skill-tag">Simulink</span>
+              <span class="skill-tag">Vector Tools</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Standards</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">ISO 26262</span>
+              <span class="skill-tag">AUTOSAR</span>
+              <span class="skill-tag">MISRA C</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education">
+      <div class="container reveal">
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <p class="edu-degree">Mechanical Engineering BSc.</p>
+            <p class="edu-university">Shiraz University</p>
+            <p class="edu-year">2017 – 2022</p>
+            <p class="edu-detail">Solid mechanics, thermodynamics, and engineering mathematics.
+              Final-year project in dynamic systems modelling.</p>
+          </div>
+          <div class="edu-card">
+            <p class="edu-degree">Mechatronics Engineering MSc.</p>
+            <p class="edu-university">Shahid Beheshti University</p>
+            <p class="edu-year">2022 – 2025</p>
+            <p class="edu-detail">Focus on intelligent control systems and robotics.
+              Thesis: type-I fuzzy logic control applied to nonlinear dynamic systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===================== WORK EXPERIENCE ===================== -->
+    <section id="experience">
+      <div class="container reveal">
+        <p class="section-label">Career</p>
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <p class="timeline-company">AVID Mechanics</p>
+                <p class="timeline-period">2021 – 2023</p>
+              </div>
+              <p class="timeline-role">Mechatronics Engineer / AI Researcher</p>
+              <ul class="timeline-bullets">
+                <li>Designed and implemented intelligent control algorithms for robotic platforms using fuzzy logic and
+                  model-based methods in MATLAB/Simulink.</li>
+                <li>Researched and prototyped AI-assisted perception pipelines, integrating sensor fusion from IMU and
+                  vision sources.</li>
+                <li>Developed embedded firmware in C for motion control microcontrollers; validated against
+                  hardware-in-the-loop test rigs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item--gap">
+            <span class="timeline-dot timeline-dot--muted"></span>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <p class="timeline-company timeline-company--muted">Independent / Research</p>
+                <p class="timeline-period">2023 – 2025</p>
+              </div>
+              <p class="timeline-role" style="color: var(--color-muted);">Open-source development & Completing MSc
+                degree</p>
+              <ul class="timeline-bullets">
+                <li>Built and published <a href="https://crates.io/crates/fuzzy-logic_rs" target="_blank"
+                    rel="noopener">fuzzy-logic_rs</a> — a type-I fuzzy logic library in Rust, available on crates.io.
+                </li>
+                <li>Completing my masters degree</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <p class="timeline-company">SoftwareMotion Co., Ltd</p>
+                <p class="timeline-period">2025 – Present</p>
+              </div>
+              <p class="timeline-role">ADAS Control Engineer</p>
+              <ul class="timeline-bullets">
+                <li>Developing control software for Advanced Driver Assistance Systems (ADAS) — lateral and longitudinal
+                  vehicle motion control.</li>
+                <li>Working within an ISO&nbsp;26262 functional safety framework; contributing to ASIL-B software
+                  components.</li>
+                <!-- <li>Implementing and tuning MPC-based controllers for path tracking; validating in simulation and on-vehicle test environments.</li> -->
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects">
+      <div class="container reveal">
+        <p class="section-label">What I've built</p>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <h3><a href="https://crates.io/crates/fuzzy-logic_rs" target="_blank" rel="noopener">fuzzy-logic_rs</a>
+              </h3>
+              <a href="https://github.com/MohammadAminSadat" target="_blank" rel="noopener" class="project-github-link"
+                aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97 0 1.95.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.15v3.19c0 .3.2.66.79.55A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+                </svg>
+              </a>
+            </div>
+            <p>A type-I fuzzy logic control library written in Rust. Designed for embedded targets — zero runtime
+              allocations in the hot path, supports Mamdani inference with centroid defuzzification. Published on
+              crates.io.</p>
+            <div class="project-tags">
+              <span class="skill-tag">Rust</span>
+              <span class="skill-tag">Fuzzy Logic</span>
+              <span class="skill-tag">Embedded</span>
+              <span class="skill-tag">Control Systems</span>
+            </div>
+          </div>
+
+          <!-- <div class="project-card">
+            <div class="project-card-header">
+              <h3>MSc Thesis — Fuzzy Control for Nonlinear Systems</h3>
+            </div>
+            <p>Developed and validated a type-I Takagi-Sugeno fuzzy controller for a class of nonlinear dynamic systems. Modelled and simulated in MATLAB/Simulink; compared against PID baseline with measurable stability improvement.</p>
+            <div class="project-tags">
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">Simulink</span>
+              <span class="skill-tag">Fuzzy Control</span>
+              <span class="skill-tag">Nonlinear Systems</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <h3>Sensor Fusion for Mobile Robot Navigation</h3>
+            </div>
+            <p>Implemented an EKF-based sensor fusion pipeline combining IMU and wheel odometry for indoor mobile robot localisation. Written in C++ with a ROS interface; tested on a physical differential-drive platform.</p>
+            <div class="project-tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">ROS</span>
+              <span class="skill-tag">EKF</span>
+              <span class="skill-tag">Sensor Fusion</span>
+            </div>
+          </div>
+
+        </div> -->
+
+          <!-- <a href="https://github.com/MohammadAminSadat" target="_blank" rel="noopener" class="github-profile-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.96 10.96 0 012.87-.39c.97 0 1.95.13 2.87.39 2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.07.78 2.15v3.19c0 .3.2.66.79.55A11.51 11.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+          View all projects on GitHub
+        </a> -->
+        </div>
+    </section>
+
   </main>
 
-  <!-- FOOTER (injected by main.js — edit SOCIAL_LINKS in js/main.js) -->
+  <!-- FOOTER -->
   <div id="site-footer"></div>
-
-  <!-- Main script (classic, works with file:// and any server) -->
   <script src="js/main.js"></script>
 
 </body>
+
 </html>
