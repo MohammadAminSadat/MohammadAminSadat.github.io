@@ -1,0 +1,215 @@
+/* ==========================================================================
+   contact.css — Contact page: form + social/email links
+   ========================================================================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ---- Left: form ---- */
+.contact-form-section h3,
+.contact-links-section h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.975rem;
+  color: var(--color-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(157, 180, 196, 0.45);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(10, 191, 188, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+/* Validation error state */
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: #e05c6e;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: #e05c6e;
+  font-weight: 500;
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--color-accent);
+  color: var(--color-btn-text);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.form-submit:hover:not(:disabled) {
+  background: var(--color-accent2);
+  transform: translateY(-1px);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-submit svg {
+  width: 16px;
+  height: 16px;
+}
+
+.form-feedback {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.65rem 1rem;
+  border-radius: 7px;
+}
+
+.form-feedback.success {
+  display: block;
+  background: rgba(10, 191, 188, 0.1);
+  color: var(--color-accent2);
+  border: 1px solid rgba(10, 191, 188, 0.25);
+}
+
+.form-feedback.error {
+  display: block;
+  background: rgba(224, 92, 110, 0.1);
+  color: #e05c6e;
+  border: 1px solid rgba(224, 92, 110, 0.25);
+}
+
+/* ---- Right: email + social ---- */
+.contact-links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-email-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contact-email-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.975rem;
+  color: var(--color-muted);
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.contact-email-list li a:hover {
+  color: var(--color-accent);
+}
+
+.contact-email-list li a svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent2);
+  flex-shrink: 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 420px;                  /* cap width so buttons aren't too wide */
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;           /* centre content now that width is fixed */
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-surface);
+  transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.social-link:hover {
+  border-color: var(--color-accent2);
+  background: rgba(10, 191, 188, 0.08);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 720px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .social-grid {
+    max-width: 100%;
+  }
+}

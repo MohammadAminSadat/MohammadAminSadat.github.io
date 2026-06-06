@@ -1,0 +1,56 @@
+/* ==========================================================================
+   page.css — Shared styles for interior pages (blog, contact, etc.)
+   Provides the top page-hero banner and general page padding.
+   ========================================================================== */
+
+/* Compact top banner replacing the full-screen hero on interior pages */
+.page-hero {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 4rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle tiffany glow — mirrors the home page orb */
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10, 191, 188, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+}
+
+.page-hero-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.4rem;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+  max-width: 500px;
+  line-height: 1.7;
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "blog/index.json — The only file you need to edit when adding a new post or series.",
+  "_instructions": {
+    "add_series": "Add an entry to 'series' with the folder name as the key.",
+    "add_post":   "Append the markdown filename (without path) to the series 'posts' array. Newest post LAST — the loader reverses the list so newest appears first in the UI."
+  },
+  "series": [
+    {
+      "id": "projects",
+      "posts": ["fuzzy-logic-rust.md"]
+    },
+    {
+      "id": "personal",
+      "posts": ["adas-intro.md"]
+    }
+  ]
+}

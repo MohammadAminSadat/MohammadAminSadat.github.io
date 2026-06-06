@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="max-image-preview:large" />
+  <title>Mohammad Amin Sadat</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets (order matters: tokens → base → components) -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Mohammad Amin Sadat</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"   class="nav-item active">Home</a></li>
+      <li><a href="blog.html"    class="nav-item">Blog</a></li>
+      <li><a href="contact.html" class="nav-item">Contact Me</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main id="content">
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">Mohammad Amin</h1>
+
+        <div class="hero-titles">
+          <span class="hero-tag">Mechatronics Engineer</span>
+          <span class="hero-tag">AI Enthusiast</span>
+        </div>
+
+        <blockquote class="hero-quote">
+          <p>Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.</p>
+          <cite>— Sir Henry Royce</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container reveal">
+        <p class="section-label">Who I am</p>
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+          Hi, my name is Seyed Mohammad Amin (Reza) Sadat. I am a mechatronics engineer with an MSc degree.
+          I'm passionate about technology, robots, and self-driving cars. I enjoy playing electric guitar and
+          listening to rock and metal music. I'm also passionate about karate, holding a 3rd dan black belt
+          with coaching and referee certifications. This website is a space for me to share my thoughts,
+          projects, and experiences.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container reveal">
+        <p class="section-label">Academic Background</p>
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <p class="edu-degree">Mechanical Engineering BSc.</p>
+            <p class="edu-university">Shiraz University</p>
+          </div>
+          <div class="edu-card">
+            <p class="edu-degree">Mechatronics Engineering MSc.</p>
+            <p class="edu-university">Shahid Beheshti University</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience">
+      <div class="container reveal">
+        <p class="section-label">Career</p>
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-company">AVID Mechanics</p>
+              <p class="timeline-role">Mechatronics Engineer / AI Researcher</p>
+              <p class="timeline-period">2021 – 2023</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-company">SoftwareMotion Co., Ltd</p>
+              <p class="timeline-role">ADAS Control Engineer</p>
+              <p class="timeline-period">2025 – Present</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container reveal">
+        <p class="section-label">What I've built</p>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>
+              <a href="https://crates.io/crates/fuzzy-logic_rs" target="_blank" rel="noopener">
+                fuzzy-logic_rs
+              </a>
+            </h3>
+            <p>
+              This project was a passion of mine. This library is fully functional for type I systems.
+              I plan to update it in the future and add more functionalities.
+            </p>
+          </div>
+          <!-- Add more project cards here -->
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- CURRICULUM VITAE -->
+    <section id="cv">
+      <div class="container reveal">
+        <p class="section-label">Resume</p>
+        <h2 class="section-title">Curriculum Vitae</h2>
+
+        <div class="cv-block">
+          <p>You can download the latest version of my CV from here.</p>
+          <a href="https://mohammadaminsadat.github.io/wp-content/uploads/2025/07/CV.pdf"
+             target="_blank" rel="noopener" class="btn">
+            <!-- Download icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (injected by main.js — edit SOCIAL_LINKS in js/main.js) -->
+  <div id="site-footer"></div>
+
+  <!-- Main script (classic, works with file:// and any server) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

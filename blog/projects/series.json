@@ -1,0 +1,6 @@
+{
+  "id":          "projects",
+  "title":       "Projects",
+  "description": "Deep-dives into personal and professional engineering projects — design decisions, lessons learned, and open-source work.",
+  "icon":        "⚙️"
+}

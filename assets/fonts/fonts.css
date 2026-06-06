@@ -1,0 +1,73 @@
+/* ==========================================================================
+   fonts.css — Self-hosted @font-face declarations
+   
+   HOW TO USE
+   ──────────
+   1. Download the font files (instructions in assets/fonts/README.md)
+   2. Place the .woff2 files in this same folder (assets/fonts/)
+   3. In every HTML file, replace the Google Fonts <link> tags with:
+         <link rel="stylesheet" href="assets/fonts/fonts.css" />
+   4. Remove the two <link rel="preconnect"> tags for fonts.googleapis.com
+   
+   Until you do step 3, the HTML files continue loading from Google Fonts
+   and this file has no effect. Both approaches work simultaneously during
+   the transition — there is no breakage.
+   ========================================================================== */
+
+/* ── Playfair Display ──────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('playfair-display-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('playfair-display-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('playfair-display-900.woff2') format('woff2');
+}
+
+/* ── DM Sans ───────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'DM Sans';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('dm-sans-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('dm-sans-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('dm-sans-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('dm-sans-600.woff2') format('woff2');
+}

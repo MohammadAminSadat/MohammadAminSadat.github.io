@@ -1,0 +1,39 @@
+/* ==========================================================================
+   animations.css — Keyframes and scroll-reveal utility class
+   ========================================================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+ * Scroll-reveal pattern:
+ * 1. .reveal starts hidden (opacity 0, shifted down slightly)
+ * 2. JS (main.js) adds .visible when the element enters the viewport
+ * 3. Fallback: if JS never runs, a 2s CSS timeout makes it visible anyway
+ *    so content is never permanently hidden.
+ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  /* Safety net: force visible after 2s in case JS fails */
+  animation: revealFallback 0s 2s forwards;
+}
+
+@keyframes revealFallback {
+  to { opacity: 1; transform: none; }
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+  animation: none; /* cancel fallback once JS has handled it */
+}

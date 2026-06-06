@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Mohammad Amin Sadat</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/page.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Mohammad Amin Sadat</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"   class="nav-item">Home</a></li>
+      <li><a href="blog.html"    class="nav-item active">Blog</a></li>
+      <li><a href="contact.html" class="nav-item">Contact Me</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <p class="page-hero-label">Writing</p>
+        <h1 class="page-hero-title">Blog</h1>
+        <p class="page-hero-subtitle">Thoughts on engineering, robotics, control systems, and whatever else is occupying my mind.</p>
+      </div>
+    </header>
+
+    <!-- BLOG CONTENT (list or single post, rendered by blog.js) -->
+    <section id="blog">
+      <div class="container">
+        <div id="blog-content">
+          <!-- Populated by blog.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (injected by main.js) -->
+  <div id="site-footer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/blog-loader.js"></script>
+  <script src="js/blog.js"></script>
+
+</body>
+</html>
