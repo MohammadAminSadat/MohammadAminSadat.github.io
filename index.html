@@ -52,40 +52,79 @@
 
     <!-- ===================== HERO ===================== -->
     <section id="hero">
+
+      <!-- decorative elements -->
+      <div class="hero-scan" aria-hidden="true"></div>
+      <div class="hero-corner hero-corner--tl" aria-hidden="true"></div>
+      <div class="hero-corner hero-corner--tr" aria-hidden="true"></div>
+      <div class="hero-corner hero-corner--bl" aria-hidden="true"></div>
+      <div class="hero-corner hero-corner--br" aria-hidden="true"></div>
+
       <div class="hero-inner">
-        <p class="hero-eyebrow">Hello, I'm</p>
-        <h1 class="hero-name">Mohammad Amin</h1>
 
-        <div class="hero-titles">
-          <span class="hero-tag">Embedded Software Engineer</span>
-          <span class="hero-tag">Control Engineer</span>
-          <span class="hero-tag">Autonomous Vehicles</span>
+        <div class="hero-body">
+          <p class="hero-eyebrow">Hello, I'm</p>
+
+          <h1 class="hero-name">Mohammad Amin</h1>
+
+          <p class="hero-role">ADAS &amp; Embedded Software Engineer</p>
+
+          <div class="hero-titles">
+            <!-- <span class="hero-tag">ISO 26262</span> -->
+            <span class="hero-tag">C/C++</span>
+            <span class="hero-tag">Rust</span>
+            <span class="hero-tag">Control Theory</span>
+            <span class="hero-tag">ROS2</span>
+          </div>
+
+          <p class="hero-subtitle">
+            Building safety-critical software for self-driving systems —
+            from control algorithms to ASIL-B embedded components.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+              </svg>
+              See My Work
+            </a>
+            <a href="assets/CV/CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost"
+              download="Mohammad_Amin_Sadat_CV.pdf">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+              </svg>
+              Download CV
+            </a>
+          </div>
         </div>
 
-        <p class="hero-subtitle">
-          Building safety-critical software for self-driving systems.<br>
-          <!-- ISO&nbsp;26262 · C++ · Rust · Control Theory -->
-        </p>
+        <!-- right: floating stat cards -->
+        <!-- <div class="hero-stats" aria-hidden="true">
+          <div class="hero-stat">
+            <span class="hero-stat-val">4+</span>
+            <span class="hero-stat-lbl">Years exp.</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-val">MSc</span>
+            <span class="hero-stat-lbl">Mechatronics</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-val">ASIL-B</span>
+            <span class="hero-stat-lbl">ISO 26262</span>
+          </div>
+        </div> -->
 
-        <div class="hero-cta">
-          <a href="#projects" class="btn">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              stroke-width="2" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
-            </svg>
-            See My Work
-          </a>
-          <a href="assets/CV/CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost"
-            download="Mohammad_Amin_Sadat_CV.pdf">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              stroke-width="2" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-            </svg>
-            Download CV
-          </a>
-        </div>
       </div>
+
+      <!-- <div class="hero-scroll" aria-hidden="true">
+        <div class="hero-scroll-mouse"></div>
+        Scroll
+      </div> -->
+
     </section>
 
     <!-- QUOTE BAND -->
@@ -114,6 +153,8 @@
           Outside of engineering, I play electric guitar, have a soft spot for rock and metal, and hold a 3rd dan black
           belt in karate (yes, I coach and referee too). I share my space with Ash, my kitten, who has strong opinions
           about my keyboard and my deadlines.
+        </p>
+        <p class="about-text" style="margin-top:1rem;">
           This site is where I share the projects I'm building, the ideas I'm exploring, and the occasional thought
           worth putting into words.
         </p>
