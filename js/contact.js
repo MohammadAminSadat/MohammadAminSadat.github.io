@@ -51,18 +51,19 @@ function validateForm(form) {
 }
 
 function setFormState(form, state) {
-  const btn = form.querySelector('.form-submit');
+  const btn      = form.querySelector('.form-submit');
+  const btnText  = btn.querySelector('span');
   const feedback = document.getElementById('form-feedback');
 
   if (state === 'loading') {
     btn.disabled = true;
-    btn.textContent = 'Sending…';
+    if (btnText) btnText.textContent = 'Sending…';
     if (feedback) feedback.className = 'form-feedback';
   }
 
   if (state === 'success') {
     btn.disabled = false;
-    btn.textContent = 'Send Message';
+    if (btnText) btnText.textContent = 'Send Message';
     form.reset();
     if (feedback) {
       feedback.className = 'form-feedback success';
@@ -72,7 +73,7 @@ function setFormState(form, state) {
 
   if (state === 'error') {
     btn.disabled = false;
-    btn.textContent = 'Send Message';
+    if (btnText) btnText.textContent = 'Send Message';
     if (feedback) {
       feedback.className = 'form-feedback error';
       feedback.textContent = 'Something went wrong. Please email me directly.';

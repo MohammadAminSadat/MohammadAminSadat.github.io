@@ -80,6 +80,11 @@
   animation: fadeUp 0.7s 0.65s forwards;
 }
 
+.hero-cta .btn {
+  width: 180px;
+  justify-content: center;
+}
+
 /* Ghost/outline variant of the btn used in hero */
 .btn--ghost {
   background: transparent;

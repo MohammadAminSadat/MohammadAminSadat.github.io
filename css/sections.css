@@ -23,18 +23,17 @@
 .quote-band-inner p {
   font-style: italic;
   color: var(--color-muted);
-  font-size: 0.975rem;
+  font-size: 1.05rem;
   line-height: 1.65;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0;
 }
 
-/* AFTER */
 .quote-band-inner cite {
-  display: block;           /* ← own line */
-  margin-top: 0.2rem;       /* ← breathing room below the quote */
+  display: block;
+  margin-top: 0.35rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: var(--color-accent);
   letter-spacing: 0.05em;
   text-transform: uppercase;
