@@ -37,7 +37,7 @@
   pointer-events: none;
 }
 
-/* ── Scanning line ── */
+/* ── Scanning line ──
 .hero-scan {
   position: absolute;
   left: 0;
@@ -52,13 +52,103 @@
   );
   pointer-events: none;
   animation: heroScan 5s ease-in-out infinite;
-}
+} */
 
-@keyframes heroScan {
+/* @keyframes heroScan {
   0%   { top: 10%; opacity: 0; }
   8%   { opacity: 1; }
   92%  { opacity: 0.35; }
   100% { top: 90%; opacity: 0; }
+} */
+
+/* Remove the old .hero-scan rule entirely, then add: */
+
+/* LiDAR canvas */
+#lidar-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hero name: invisible base (LiDAR reveals it) */
+.hero-name {
+  color: transparent;
+  position: relative;
+}
+
+/* Revealed overlay — clip-path driven by JS */
+.hero-name-reveal {
+  position: absolute;
+  inset: 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: inherit;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+  pointer-events: none;
+}
+
+/* Sensor node */
+.lidar-sensor {
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+  width: 22px;
+  height: 22px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.lidar-sensor-core {
+  position: absolute;
+  inset: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(10, 191, 188, 0.8);
+  animation: sensorPulse 2s ease-in-out infinite;
+}
+
+.lidar-sensor-ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(10, 191, 188, 0.5);
+  border-radius: 50%;
+  animation: sensorRing 2s ease-in-out infinite;
+}
+
+@keyframes sensorPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(10, 191, 188, 0.8); }
+  50%       { box-shadow: 0 0 18px rgba(10, 191, 188, 0.4); }
+}
+
+@keyframes sensorRing {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* "OBJECT DETECTED" label */
+.lidar-label {
+  position: absolute;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(10, 191, 188, 0.08);
+  border: 1px solid rgba(10, 191, 188, 0.25);
+  border-radius: 4px;
+  padding: 3px 9px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  white-space: nowrap;
 }
 
 /* ── Corner brackets ── */
@@ -127,7 +217,8 @@
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.025em;
-  color: var(--color-text);
+  color: transparent;
+  /* color: var(--color-text); */
   margin-bottom: 0.4rem;
   opacity: 0;
   animation: fadeUp 0.6s 0.25s forwards;

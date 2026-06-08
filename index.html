@@ -53,24 +53,38 @@
     <!-- ===================== HERO ===================== -->
     <section id="hero">
 
-      <!-- decorative elements -->
-      <div class="hero-scan" aria-hidden="true"></div>
+      <!-- LiDAR canvas — replaces hero-scan -->
+      <canvas id="lidar-canvas" aria-hidden="true"></canvas>
+
+      <!-- corner brackets -->
       <div class="hero-corner hero-corner--tl" aria-hidden="true"></div>
       <div class="hero-corner hero-corner--tr" aria-hidden="true"></div>
       <div class="hero-corner hero-corner--bl" aria-hidden="true"></div>
       <div class="hero-corner hero-corner--br" aria-hidden="true"></div>
 
-      <div class="hero-inner">
+      <!-- LiDAR sensor node (bottom-right) -->
+      <div class="lidar-sensor" aria-hidden="true">
+        <div class="lidar-sensor-ring"></div>
+        <div class="lidar-sensor-core"></div>
+      </div>
 
+      <!-- "OBJECT DETECTED" label — JS positions this above the name -->
+      <div class="lidar-label" id="lidar-label">OBJECT DETECTED</div>
+
+      <div class="hero-inner">
         <div class="hero-body">
           <p class="hero-eyebrow">Hello, I'm</p>
 
-          <h1 class="hero-name">Mohammad Amin</h1>
+          <!-- name has invisible base + a clip-path reveal overlay -->
+          <h1 class="hero-name" id="hero-name-el">
+            Mohammad Amin
+            <span class="hero-name-reveal" id="hero-name-reveal" aria-hidden="true">Mohammad Amin</span>
+          </h1>
 
           <p class="hero-role">ADAS &amp; Embedded Software Engineer</p>
 
           <div class="hero-titles">
-            <!-- <span class="hero-tag">ISO 26262</span> -->
+            <span class="hero-tag">AUTOSAR</span>
             <span class="hero-tag">C/C++</span>
             <span class="hero-tag">Rust</span>
             <span class="hero-tag">Control Theory</span>
@@ -101,29 +115,7 @@
             </a>
           </div>
         </div>
-
-        <!-- right: floating stat cards -->
-        <!-- <div class="hero-stats" aria-hidden="true">
-          <div class="hero-stat">
-            <span class="hero-stat-val">4+</span>
-            <span class="hero-stat-lbl">Years exp.</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-val">MSc</span>
-            <span class="hero-stat-lbl">Mechatronics</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-val">ASIL-B</span>
-            <span class="hero-stat-lbl">ISO 26262</span>
-          </div>
-        </div> -->
-
       </div>
-
-      <!-- <div class="hero-scroll" aria-hidden="true">
-        <div class="hero-scroll-mouse"></div>
-        Scroll
-      </div> -->
 
     </section>
 
@@ -387,7 +379,7 @@
   <!-- FOOTER -->
   <div id="site-footer"></div>
   <script src="js/main.js"></script>
-
+  <script src="js/lidar.js"></script>
 </body>
 
 </html>
