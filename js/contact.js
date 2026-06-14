@@ -27,8 +27,8 @@ function clearFieldError(field) {
 
 function validateForm(form) {
   let valid = true;
-  const name    = form.querySelector('#name');
-  const email   = form.querySelector('#email');
+  const name = form.querySelector('#name');
+  const email = form.querySelector('#email');
   const message = form.querySelector('#message');
 
   if (!name.value.trim()) {
@@ -51,8 +51,8 @@ function validateForm(form) {
 }
 
 function setFormState(form, state) {
-  const btn      = form.querySelector('.form-submit');
-  const btnText  = btn.querySelector('span');
+  const btn = form.querySelector('.form-submit');
+  const btnText = btn.querySelector('span');
   const feedback = document.getElementById('form-feedback');
 
   if (state === 'loading') {
@@ -117,4 +117,35 @@ document.addEventListener('DOMContentLoaded', () => {
       setFormState(form, 'error');
     }
   });
+  // ── Crypto support widget ──
+  const CRYPTO_WALLETS = [
+    { coin: 'BTC', address: 'bc1phluehdxs4ztkskvgn4tu2y90vn33xhud6h9yjsxghturzy3qm4lsdfdcsv', network: 'Bitcoin — Network: Bitcoin' },
+    { coin: 'ETH', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'Ethereum — Network: ERC-20' },
+    { coin: 'USDT', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'USDT — Network: ERC-20 · verify network before sending' },
+    { coin: 'USDC', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'USDC — Network: ERC-20 · verify network before sending' },
+  ];
+
+  const coinTabs = document.querySelectorAll('.coin-tab');
+  const walletAddr = document.querySelector('.wallet-address');
+  const walletNet = document.querySelector('.wallet-network');
+  const copyBtn = document.querySelector('.copy-wallet-btn');
+
+  if (coinTabs.length && walletAddr) {
+    coinTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        coinTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const w = CRYPTO_WALLETS[tab.dataset.index];
+        walletAddr.textContent = w.address;
+        walletNet.textContent = w.network;
+        if (copyBtn) copyBtn.textContent = 'Copy';
+      });
+    });
+
+    copyBtn?.addEventListener('click', async () => {
+      await navigator.clipboard.writeText(walletAddr.textContent);
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => (copyBtn.textContent = 'Copy'), 1500);
+    });
+  }
 });
