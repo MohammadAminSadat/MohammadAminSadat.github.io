@@ -1,12 +1,12 @@
 /* ==========================================================================
    tokens.css — Design tokens (CSS custom properties)
-   Single source of truth for all colours, spacing, typography, and layout.
-   Edit here to retheme the entire site.
+   Single source of truth for all colors, spacing, typography, and layout.
+   Edit here to re-theme the entire site.
    ========================================================================== */
 
 :root {
-  /* --- Colour palette ---
-     Primary:  Tiffany Blue  #0ABFBC
+  /* --- Color palette ---
+     Primary:  Tiffany Blue  #0ABAB5 
      Text:     Bone White    #F5F0E8
      BG:       Deep Navy     #0D1B2A
   */
@@ -14,7 +14,7 @@
   --color-surface:   #132333;   /* slightly lighter navy — cards, nav, alt sections */
   --color-text:      #F5F0E8;   /* bone white — primary readable text        */
   --color-muted:     #9DB4C4;   /* readable steel blue-grey on dark bg       */
-  --color-accent:    #0ABFBC;   /* Tiffany blue — primary interactive colour  */
+  --color-accent:    #0ABAB5;   /* Tiffany blue — primary interactive color  */
   --color-accent2:   #5DD9D6;   /* lighter teal — hover states, underlines   */
   --color-border:    #2A4560;   /* visible but subtle border — was too dark   */
   --color-btn-text:  #0D1B2A;   /* dark text on filled Tiffany blue buttons   */
