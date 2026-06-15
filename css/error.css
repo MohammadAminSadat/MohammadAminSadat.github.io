@@ -1,0 +1,107 @@
+.error-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.error-card {
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+}
+
+.error-code {
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 14vw, 10rem);
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-accent);
+  text-stroke: 2px var(--color-accent);
+  opacity: 0.3;
+  margin-bottom: 0.25rem;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.error-code--filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 14vw, 10rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.error-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-accent);
+  margin: 0.75rem auto 1.25rem;
+  opacity: 0.5;
+}
+
+.error-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.error-message {
+  font-size: 0.975rem;
+  color: var(--color-muted);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* ── Error glow orb ── */
+.error-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10, 191, 188, 0.06) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── Corner brackets ── */
+.error-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0.25;
+}
+
+.error-corner--tl { top: -12px; left: -12px; border-top: 1.5px solid var(--color-accent); border-left:  1.5px solid var(--color-accent); }
+.error-corner--tr { top: -12px; right: -12px; border-top: 1.5px solid var(--color-accent); border-right: 1.5px solid var(--color-accent); }
+.error-corner--bl { bottom: -12px; left: -12px; border-bottom: 1.5px solid var(--color-accent); border-left:  1.5px solid var(--color-accent); }
+.error-corner--br { bottom: -12px; right: -12px; border-bottom: 1.5px solid var(--color-accent); border-right: 1.5px solid var(--color-accent); }
+
+@media (max-width: 640px) {
+  .error-page {
+    min-height: calc(100vh - var(--nav-height) - 120px);
+  }
+}
