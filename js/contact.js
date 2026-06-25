@@ -121,8 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const CRYPTO_WALLETS = [
     { coin: 'BTC', address: 'bc1phluehdxs4ztkskvgn4tu2y90vn33xhud6h9yjsxghturzy3qm4lsdfdcsv', network: 'Bitcoin — Network: Bitcoin' },
     { coin: 'ETH', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'Ethereum — Network: ERC-20' },
-    { coin: 'USDT', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'USDT — Network: ERC-20 · verify network before sending' },
-    { coin: 'USDC', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'USDC — Network: ERC-20 · verify network before sending' },
+    { coin: 'USDT', address: 'TRiwFyAehRmDtUo7nKYP7X84aAedpN3Vd7', network: 'USDT — Network: TRC-20 · send only via Tron network' },
+    { coin: 'USDC', address: '0x2b648E645E6A6452679F7cE80e812845D09984D3', network: 'USDC — Network: Base · send only via Base network' },
+    { coin: 'TRX', address: 'TRiwFyAehRmDtUo7nKYP7X84aAedpN3Vd7', network: 'Tron — Network: TRC-20' },
   ];
 
   const coinTabs = document.querySelectorAll('.coin-tab');

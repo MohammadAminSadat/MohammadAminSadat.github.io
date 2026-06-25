@@ -80,6 +80,7 @@
 }
 
 /* Revealed overlay — clip-path driven by JS */
+/* AFTER */
 .hero-name-reveal {
   position: absolute;
   inset: 0;
@@ -89,11 +90,11 @@
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.025em;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
   clip-path: inset(0 100% 0 0);
   pointer-events: none;
 }
-
 /* Sensor node */
 .lidar-sensor {
   position: absolute;
