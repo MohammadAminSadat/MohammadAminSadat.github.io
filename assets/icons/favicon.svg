@@ -26,8 +26,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      inkscape:zoom="0.30821372"
-     inkscape:cx="475.31953"
-     inkscape:cy="394.20699"
+     inkscape:cx="498.03105"
+     inkscape:cy="939.28331"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -174,7 +174,7 @@
   <!-- Bottom-left arc (dark): dot start (left) sweeping clockwise under the bottom to a flat-cut end (lower-right) -->
   <g
      id="g1"
-     transform="matrix(2.6661819,0,0,2.7919403,-1052.65,-839.15211)">
+     transform="matrix(2.7015251,0,0,2.9460413,-1083.3116,-923.40966)">
     <path
        id="path4"
        d="m 631.0293,536.97266 9.57617,14.3164 L 721,470 v 149 h 17 V 432 Z"
@@ -212,15 +212,6 @@
        fill="url(#blueGrad)"
        id="circle6"
        style="fill:url(#linearGradient4)" />
-    <path
-       d="m 424.1,531.1 a 203,203 0 0 0 298.5,172"
-       fill="none"
-       stroke="url(#navyGrad)"
-       stroke-width="15"
-       stroke-linecap="butt"
-       id="path7"
-       style="stroke:url(#linearGradient6)"
-       inkscape:label="path7" />
     <circle
        cx="426.5"
        cy="531"
@@ -228,6 +219,14 @@
        fill="url(#navyGrad)"
        id="circle7"
        style="fill:url(#linearGradient5)" />
+    <path
+       d="m 424.1,531.1 a 203,203 0 0 0 298.5,172"
+       fill="none"
+       stroke="url(#navyGrad)"
+       stroke-width="15"
+       stroke-linecap="butt"
+       id="path7"
+       style="stroke:url(#linearGradient6)" />
   </g>
   <!-- ===================== WORDMARK ===================== -->
   <!-- Custom small "A" for AMIN, matching the monogram's dot-A style -->
