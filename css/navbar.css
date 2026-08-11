@@ -2,7 +2,7 @@
    navbar.css — Fixed top navigation bar
    ========================================================================== */
 
-nav {
+#navbar {
   position: fixed;
   top: 0;
   left: 0;
