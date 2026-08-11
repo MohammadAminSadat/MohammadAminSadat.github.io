@@ -1,0 +1,6 @@
+{
+  "id":          "trading-engine",
+  "title":       "Trading Engine",
+  "description": "Building an NNFX algorithmic trading engine in modern C++20 — market data, technical indicators, deterministic back-testing, and everything in between.",
+  "icon":        "📈"
+}
