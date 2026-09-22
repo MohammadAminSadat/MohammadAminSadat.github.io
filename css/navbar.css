@@ -86,12 +86,33 @@
 
 /* --- Mobile breakpoint --- */
 @media (max-width: 640px) {
+  #navbar {
+    padding-inline: 1.25rem;
+  }
+
+  .nav-logo {
+    min-width: 0;
+  }
+
+  .nav-logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-logo-text {
+    font-size: clamp(0.95rem, 4.2vw, 1.05rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .nav-links {
     display: none;
   }
 
   .hamburger {
     display: flex;
+    flex-shrink: 0;
   }
 
   .nav-links.open {

@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Me — Mohammad Amin Sadat</title>
+  <meta name="description"
+    content="Contact Mohammad Amin Sadat about embedded systems, control engineering, real-time software, and AI collaboration." />
+  <title>Contact Mohammad Amin Sadat — Embedded Systems Engineer</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
@@ -52,10 +54,10 @@
     <!-- PAGE HERO -->
     <header class="page-hero">
       <div class="container">
-        <p class="page-hero-label">Get in touch</p>
-        <h1 class="page-hero-title">Contact Me</h1>
-        <p class="page-hero-subtitle">Have a question, a collaboration idea, or just want to say hi? I'd love to hear
-          from you.</p>
+        <p class="page-hero-label">Let's connect</p>
+        <h1 class="page-hero-title">Start a conversation</h1>
+        <p class="page-hero-subtitle">For embedded systems, control engineering, real-time software, or AI-enabled
+          products, send a note and I will get back to you as soon as I can.</p>
       </div>
     </header>
 
@@ -67,6 +69,7 @@
           <!-- ── Left: Contact form ── -->
           <div class="contact-form-section">
             <h3>Send a message</h3>
+            <p class="form-intro">A little context helps me give you a useful reply.</p>
 
             <form id="contact-form" action="https://formspree.io/f/xykakdnn" method="POST" novalidate>
 
@@ -80,20 +83,21 @@
                 <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
               </div>
 
-              <!-- <div class="form-group">
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject">
-              <option value="" disabled selected>What's this about?</option>
-              <option value="Job Opportunity">Job Opportunity</option>
-              <option value="Collaboration">Collaboration</option>
-              <option value="Technical Question">Technical Question</option>
-              <option value="Other">Other</option>
-            </select>
-          </div> -->
+              <div class="form-group">
+                <label for="subject">Topic <span class="field-optional">(optional)</span></label>
+                <select id="subject" name="subject">
+                  <option value="" selected>Choose a topic</option>
+                  <option value="Software opportunity">Software opportunity</option>
+                  <option value="Technical collaboration">Technical collaboration</option>
+                  <option value="Speaking or mentoring">Speaking or mentoring</option>
+                  <option value="General question">General question</option>
+                </select>
+              </div>
 
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="What's on your mind?"></textarea>
+                <label for="message">How can I help?</label>
+                <textarea id="message" name="message"
+                  placeholder="Tell me a little about the problem, project, or idea."></textarea>
               </div>
 
               <button type="submit" class="form-submit" id="submit-btn">
@@ -104,7 +108,8 @@
                 <span>Send Message</span>
               </button>
 
-              <div id="form-feedback" class="form-feedback"></div>
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+              <p class="form-required-note">Please include your name, a reply email, and a short message.</p>
 
             </form>
           </div>
@@ -112,13 +117,13 @@
           <!-- ── Right: availability + email + social ── -->
           <div class="contact-links-section">
 
-            <!-- <div class="contact-availability">
-          <span class="availability-dot"></span>
-          <span>Available for new opportunities · Usually replies within 48 h</span>
-        </div> -->
+            <div class="contact-availability">
+              <span class="availability-dot" aria-hidden="true"></span>
+              <span>Open to technical collaborations and meaningful conversations</span>
+            </div>
 
             <div>
-              <h3>Email me directly</h3>
+              <h3>Email is the best way to reach me</h3>
               <ul class="contact-email-list">
                 <li>
                   <a href="mailto:s.mohammad.amin.sadat@gmail.com">
@@ -128,25 +133,21 @@
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     <span>
-                      <span class="email-label">Personal</span>
+                      <span class="email-label">Work</span>
                       s.mohammad.amin.sadat@gmail.com
                     </span>
                   </a>
                 </li>
-                <li>
-                  <a href="mailto:amin.sadat@sw-motion.cn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                      stroke-width="1.8" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span>
-                      <span class="email-label">Work</span>
-                      amin.sadat@sw-motion.cn
-                    </span>
-                  </a>
-                </li>
               </ul>
+              <a href="assets/documents/Mohammad-Amin-Sadat-CV.pdf" target="_blank" rel="noopener"
+                class="contact-cv-link" download="Mohammad Amin Sadat CV.pdf">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                Download my CV
+              </a>
             </div>
 
             <div>
